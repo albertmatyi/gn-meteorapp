@@ -1,0 +1,52 @@
+<template name="nestbot">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4">
+                {{> nestbotUsers}}
+            </div>
+            <div class="col-xs-8 messenger">
+                {{> nestbotMessenger}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="nestbotUsers">
+    <ul class="users">
+        {{# each users }}
+            <li class="user {{active}} {{unread}}">
+                {{>user}}
+            </li>
+        {{/ each}}
+    </ul>
+</template>
+
+<template name="nestbotMessenger">
+    {{> messages }}
+    {{#if showTasks}}
+        {{> tasks}}
+    {{/if}}
+    {{> nestbotMessageForm}}
+</template>
+
+<template name="tasks">
+    <div class="tasks-list">
+        <h1 class="tasks-list-title">Tasks</h1>
+        {{# each tasks }}
+            <div class="task">
+                {{body}}
+            </div>
+        {{/ each}}
+    </div>
+
+</template>
+
+<template name="nestbotMessageForm">
+    <form class="message-form">
+        <input type="text" placeholder="awesome message man!"
+               class="form-control"/>
+        <button type="submit" class="send btn btn-primary">Send message</button>
+        <button type="button" class="read btn btn-link">Mark as read</button>
+        <button type="button" class="tasks btn btn-danger">Toggle tasks</button>
+    </form>
+</template>

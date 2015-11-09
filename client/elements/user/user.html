@@ -1,0 +1,19 @@
+<template name="user">
+    <div class="badge" style="background-color: {{badgeColor}}">
+        <div class="text">{{userLetters}}</div>
+    </div>
+    <div class="right-side">
+        <div class="name">
+            {{ displayName }}
+            {{#if nestbotUnreadCount}}
+                <div class="unread-count">
+                    {{nestbotUnreadCount}}
+                </div>
+            {{/if}}
+        </div>
+        <div class="username">{{username}}</div>
+        <div class="last-message-date">
+            {{moment nestbotLastMessageDate}}
+        </div>
+    </div>
+</template>

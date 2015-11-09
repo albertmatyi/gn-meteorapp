@@ -1,0 +1,56 @@
+.messages {
+  margin: 0;
+  padding: 0;
+  .message {
+    padding: 0;
+    margin: .2em;
+    list-style: none;
+    position: relative;
+    .left-side {
+      padding-right: 8em;
+      .from {
+        display: inline;
+        font-weight: bold;
+      }
+      .body {
+        display: inline;
+      }
+    }
+    .time {
+      font-size: .8em;
+      position: absolute;
+      top: .2em;
+      right: 0;
+    }
+  }
+}
+
+.messenger {
+  position: fixed;
+  top: @header-height;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  .messages, .tasks-list {
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+  }
+  .tasks-list {
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    .task, .tasks-list-title {
+      padding: 1em;
+      border-bottom: solid 1px @gray-lighter;
+    }
+  }
+  .message-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

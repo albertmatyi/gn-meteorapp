@@ -1,0 +1,30 @@
+# Node.js & Bower
+bower_components
+node_modules
+npm-debug.log
+
+# IDE
+.idea
+
+# Generated files
+build
+node-app
+logs/*
+
+# Meteor
+app/.meteor/local
+
+# Vagrant
+.cache
+.vagrant
+.bash_history
+.cloud-locale-test.skip
+
+# Atom Shell
+
+# Cordova
+app/cordova/platforms/
+app/cordova/plugins/
+app/cordova/www/
+
+

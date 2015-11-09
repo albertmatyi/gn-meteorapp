@@ -1,0 +1,18 @@
+<template name="messages">
+    <ul class="messages">
+        {{# each messages }}
+            {{> message message=this user=user}}
+        {{/ each}}
+    </ul>
+</template>
+
+
+<template name="message">
+    <li class="message">
+        <div class="left-side">
+            <div class="from">{{user.displayName}}:</div>
+            <div class="body">{{message.body}}</div>
+        </div>
+        <div class="time">{{moment message._createdAt}}</div>
+    </li>
+</template>
